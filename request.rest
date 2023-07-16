@@ -1,0 +1,29 @@
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+  "username": "fuga-human",
+  "password": "abc123aaaaa"
+}
+
+###
+GET http://localhost:3000/users
+Content-Type: application/json
+
+{}
+
+###
+GET http://localhost:3000/users/fuga-human
+Content-Type: application/json
+Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImZ1Z2EtaHVtYW4iLCJpYXQiOjE2ODk0NzcwMzMsImV4cCI6MTY4OTQ4MDYzM30.4872PSrdX6umfpQP3IW3rpyKUN7TuXGs9qbGq69M08Q"
+
+{}
+
+###
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+  "username": "fuga-human",
+  "password": "abc123aaaaa"
+}
