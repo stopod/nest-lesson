@@ -7,13 +7,7 @@ import { AuthModule } from './auth/auth.module';
 
 // デコレーター クラスを装飾する関数
 @Module({
-  imports: [
-    UsersModule,
-    MongooseModule.forRoot(
-      'mongodb+srv://stopod990:yuRm6FZ2Hx3Y2W4t@cluster0.a9yzbxr.mongodb.net/?retryWrites=true&w=majority',
-    ),
-    AuthModule,
-  ],
+  imports: [UsersModule, MongooseModule.forRoot('<mongodbのkey>'), AuthModule],
   controllers: [AppController],
   providers: [AppService],
 })
